@@ -30,9 +30,9 @@ namespace FileTransferService.Controllers
 
         [HttpDelete]
         [Route("{id}/MobileServiceFiles/{name}")]
-        public Task Delete(string id, string name)
+        public async Task Delete(string id, string name)
         {
-            return base.DeleteFileAsync(id, name);
+            await base.DeleteFileAsync(id, name);
         }
     }
 }

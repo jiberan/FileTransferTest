@@ -31,9 +31,9 @@ namespace FileTransferService.Controllers
         }
 
         // PATCH tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task<TodoItem> PatchTodoItem(string id, Delta<TodoItem> patch)
+        public async Task<TodoItem> PatchTodoItem(string id, Delta<TodoItem> patch)
         {
-            return UpdateAsync(id, patch);
+            return await UpdateAsync(id, patch);
         }
 
         // POST tables/TodoItem
@@ -44,9 +44,9 @@ namespace FileTransferService.Controllers
         }
 
         // DELETE tables/TodoItem/48D68C86-6EA6-4C25-AA33-223FC9A27959
-        public Task DeleteTodoItem(string id)
+        public async Task DeleteTodoItem(string id)
         {
-            return DeleteAsync(id);
+            await DeleteAsync(id);
         }
     }
 }
